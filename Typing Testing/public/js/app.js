@@ -1,58 +1,63 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const inputWord = document.querySelector("#inputWord");
-    const btnSearch = document.querySelector("#btnSearch");
-    const textData = document.querySelector("#textData");
+import { GeneralPractise, display } from './db.js';
+document.addEventListener("DOMContentLoaded",()=>{
+    const mainTextArea = document.querySelector("#mainTextArea");
+    const obj = display();
+    let index=Math.floor(Math.random()*obj.length);
+    let str=obj[index].data;
+    for (let i = 0; i < str.length; i++) {
+        const span = document.createElement("span");
 
-    async function getData(word) {
-        const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+        // Base classes for all characters
+        span.classList.add(
+            "border",
+            "border-gray-300",
+            "rounded-md",
+            "inline-block",
+            "px-2",
+            "py-1",
+            "m-0.5",
+            "text-lg",
+            "font-bold",
+            "font-medium",
+            "transition-colors",
+            "duration-200"
+        );
 
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error("Word not found");
-            }
-
-            const data = await response.json();
-
-            // extract the useful stuff
-            const wordName = data[0].word;
-            const part = data[0].meanings[0].partOfSpeech;
-            const phonetic = data[0].phonetic || "No phonetic available";
-            const meaning = data[0].meanings[0].definitions[0].definition;
-
-            // feed into your 4 boxes
-            const values = [wordName, part, phonetic, meaning];
-            const boxes = textData.querySelectorAll("div");
-
-            boxes.forEach((box, index) => {
-                const h1 = box.querySelector("h1");
-                h1.textContent = values[index];
-            });
-
-        } catch (err) {
-            alert(err.message);
-        }
-    }
-
-   
-    inputWord.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-            const word = inputWord.value.trim();
-            if (word !== "") {
-                getData(word);
-            } else {
-                alert("Please enter a word");
-            }
-        }
-    });
-
-    // Button click search
-    btnSearch.addEventListener("click", () => {
-        const word = inputWord.value.trim();
-        if (word !== "") {
-            getData(word);
+        // Different style for space characters
+        if (str[i] === " ") {
+            span.classList.add(
+                "bg-yellow-600",
+                "w-3"
+            );
         } else {
-            alert("Please enter a word");
+            span.classList.add(
+                "bg-white",
+                "hover:bg-blue-600",
+                "cursor-pointer"
+            );
+        }
+
+        span.innerText = str[i]; // set the character
+        mainTextArea.appendChild(span);
+    }
+    document.addEventListener("keydown", (event) => {
+        const nonTypingKeys = [
+            "Shift", "Control", "Alt", "Meta", "CapsLock",
+            "Tab", "Enter", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Escape"
+        ];
+
+        if (!nonTypingKeys.includes(event.key)) {
+           for(let i=0;i<str.length;i++)
+           {
+            if(event.key==str[i])
+            {
+                alert("Test pass");
+
+            }
+           }
+        }
+        else{
+            alert("done");
         }
     });
-});
+})
