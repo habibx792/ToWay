@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="../src/output.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+<body class="bg-amber-800">
+
+  <header class="sticky top-0">
+    <nav class="bg-black md:py-7 py-3 text-2xl text-white flex justify-between items-center">
+      <h1 class="md:text-4xl px-2 font-extrabold text-yellow-600">
+        <a href="../../index.html">Dict.Com</a>
+      </h1>
+      <ul class="flex justify-between gap-10 mr-2">
+        <li class="border-b-2 border-transparent hover:border-b-4 hover:border-white transition-all duration-300 cursor-pointer"><a href="../../index.html">Home</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main class="h-[85vh] w-full flex justify-center items-center py-10">
+    <div class="bg-white md:w-1/2 w-11/12 p-6 rounded-lg shadow-lg">
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-blue-800 mb-6">Contact Us</h2>
+      <form class="flex flex-col gap-4">
+        <div class="flex flex-col">
+          <label for="name" class="text-gray-700 font-semibold mb-1">Name</label>
+          <div class="flex items-center border border-gray-300 rounded-md overflow-hidden focus-within:border-blue-600">
+            <i class="fas fa-user px-3 text-gray-500"></i>
+            <input
+              type="text"
+              id="name"
+              placeholder="Your Name"
+              class="flex-1 p-2 outline-none"
+              required
+            />
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <label for="email" class="text-gray-700 font-semibold mb-1">Email</label>
+          <div class="flex items-center border border-gray-300 rounded-md overflow-hidden focus-within:border-blue-600">
+            <i class="fas fa-envelope px-3 text-gray-500"></i>
+            <input
+              type="email"
+              id="email"
+              placeholder="Your Email"
+              class="flex-1 p-2 outline-none"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <label for="message" class="text-gray-700 font-semibold mb-1">Message</label>
+          <div class="flex items-start border border-gray-300 rounded-md overflow-hidden focus-within:border-blue-600">
+            <i class="fas fa-comment px-3 pt-2 text-gray-500"></i>
+            <textarea
+              id="message"
+              rows="4"
+              placeholder="Your Message"
+              class="flex-1 p-2 outline-none resize-none"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="bg-blue-600 text-white font-bold py-2 rounded-md hover:bg-blue-700 transition-colors mt-4"
+        >
+          Send Message
+        </button>
+      </form>
+      <div class="mt-6 flex flex-col md:flex-row justify-around gap-3">
+        <a href="https://mail.google.com/" class="flex items-center gap-2 text-blue-600 hover:text-red-500">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://github.com/habibx792" target="_blank" class="flex items-center gap-2 text-gray-800 hover:text-gray-500">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://wa.me/+923481561759" target="_blank" class="flex items-center gap-2 text-green-600 hover:text-green-400">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="w-full mt-10 relative md:absolute -bottom-0">
+      <h1 class="text-center text-3xl md:text-6xl text-white font-bold bg-blue-600 p-4">
+        Design by Ghulam Habib "During William-6"
+      </h1>
+    </footer>
+</body>
+</html>
