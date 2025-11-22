@@ -249,6 +249,15 @@
   .top-20 {
     top: calc(var(--spacing) * 20);
   }
+  .top-24 {
+    top: calc(var(--spacing) * 24);
+  }
+  .top-30 {
+    top: calc(var(--spacing) * 30);
+  }
+  .top-40 {
+    top: calc(var(--spacing) * 40);
+  }
   .-bottom-0 {
     bottom: calc(var(--spacing) * -0);
   }
