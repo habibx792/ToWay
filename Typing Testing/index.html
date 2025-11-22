@@ -26,7 +26,7 @@
         <ul class="flex md:gap-2 text-3xl flex-row-reverse">
           <div class="flex gap-3 justify-center items-center mr-2">
             <i class="fa-regular fa-clock"></i>
-            <h1>32</h1>
+            <h1 id="timeText"></h1>
           </div>
           <li class="md:mx-5 mx-2">
             <a href=""><i class="fa-solid fa-cog"></i> </a>
@@ -46,11 +46,12 @@
     <div
       class="flex bg-gradient-to-r justify-center md:gap-10 gap-5 py-5 md:text-3xl text-black font-bold list-none from-indigo-700 via-indigo-800 to-indigo-700"
     >
-      <li data-item="0">Punctions</li>
-      <li data-item="1">Numbers</li>
-      <li data-item="2">Random</li>
-      <li data-item="3">Time</li>
-      <li data-item="4">Custom</li>
+      <li data-item="0"><a href="./public/html/gemes.html">Games</a></li>
+     <li data-item="0"><a href="./public/html/gemes.html">Punctions</a></li>
+      <li data-item="0"><a href="./public/html/gemes.html">Tests</a></li>
+       <li data-item="0"><a href="./public/html/gemes.html">Time</a></li>
+       
+
       <div class="hidden">
         <li>15</li>
         <li>30</li>
@@ -66,23 +67,44 @@
     </div>
     <div
       id="ResultDIve"
-      class="bg-gradient-to-r from-black text-3xl text-white via-gray-950 to-gray-950 h-[500px] flex justify-center items-start flex-col gap-20 w-[500px] absolute z-50  rounded-3xl border-2 border-slate-900 hidden"
+      class="bg-gradient-to-r from-black text-3xl text-white via-gray-950 to-gray-950 flex justify-center items-start flex-col gap-5 w-[500px] absolute z-50 rounded-3xl border-2 border-slate-900 hidden"
     >
-      <div class="ml-5">
+      <h1 class="bg-blue-600 text-4xl w-full mt-2 rounded-3xl py-3 text-white text-center">Results</h1>
+      <div
+        class="flex justify-between rounded-3xl py-3 bg-amber-800 px-3 w-full"
+      >
         <h1>WPM :</h1>
-        <h1>45</h1>
+        <h1 id="wpmSPeed" class="text-2xl text-white">45</h1>
       </div>
-      <div class="ml-5">
+      <div
+        class="flex justify-between rounded-3xl py-3 bg-amber-800 px-3 w-full"
+      >
         <h1>Raw :</h1>
-        <h1></h1>
+        <h1 id="rawSpeed" class="text-2xl text-white"></h1>
       </div>
-      <div class="ml-5">
+       <div
+        class="flex justify-between rounded-3xl py-3 bg-amber-800 px-3 w-full"
+      >
+        <h1>Time :</h1>
+        <h1 id="Time" class="text-2xl text-white"></h1>
+      </div>
+      <div
+        class="flex justify-between rounded-3xl py-3 bg-amber-800 px-3 w-full"
+      >
+        <h1>Accuracy :</h1>
+        <h1 id="Accuracy" class="text-2xl text-white"></h1>
+      </div>
+      <div
+        class="flex justify-between rounded-3xl py-3 bg-amber-800 px-3 w-full"
+      >
         <h1>Correct Letters :</h1>
-        <h1></h1>
+        <h1 id="correctLetter" class="text-2xl text-white"></h1>
       </div>
-      <div class="ml-5">
+      <div
+        class="flex justify-between rounded-3xl py-3 bg-amber-800 px-3 w-full"
+      >
         <h1>Wrong Letter :</h1>
-        <h1></h1>
+        <h1 id="wrongLetter" class="text-2xl text-white"></h1>
       </div>
     </div>
 
