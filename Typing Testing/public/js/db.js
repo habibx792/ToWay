@@ -1,7 +1,7 @@
 export const GeneralPractise = [
     {
         "Type": "General Practice",
-        "data": "A software engineer designs and builds digital systems, ensuring efficient performance and reliable functionality. Their work blends logical thinking, creativity, and problem-solving to deliver applications that support businesses and improve everyday experiences."
+        "data": "A software engineer designs and builds "
     },
     {
         "Type": "General Practice",
