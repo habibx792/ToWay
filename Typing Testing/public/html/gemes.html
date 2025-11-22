@@ -12,7 +12,7 @@
     />
     <script src="../js/games.js" defer></script>
   </head>
-  <body class="bg-gradient-to-r from-blue-700 to-blue-800">
+  <body class="bg-gradient-to-r from-indigo-500 via-indigo-700 to-indigo-950">
     <header class="flex flex-col py-5 justify-center items-center bg-amber-900">
       <nav class="flex justify-between items-center w-full">
        <a href="../../index.html">
@@ -40,6 +40,48 @@
         </ul>
       </nav>
     </header>
+    <div
+      id="ResultDIve"
+      class="bg-gradient-to-r from-black text-3xl text-white via-gray-950 to-gray-950 flex justify-center items-start flex-col gap-5 w-[500px] absolute z-50 rounded-3xl border-2 border-slate-900 hidden"
+    >
+      <h1 class="bg-blue-600 text-4xl w-full mt-2 rounded-3xl py-3 text-white text-center">Results</h1>
+      <div
+        class="flex justify-between rounded-3xl py-3 bg-amber-800 px-3 w-full"
+      >
+        <h1>WPM :</h1>
+        <h1 id="wpmSPeed" class="text-2xl text-white"></h1>
+      </div>
+      <div
+        class="flex justify-between rounded-3xl py-3 bg-amber-800 px-3 w-full"
+      >
+        <h1>Raw :</h1>
+        <h1 id="rawSpeed" class="text-2xl text-white"></h1>
+      </div>
+       <div
+        class="flex justify-between rounded-3xl py-3 bg-amber-800 px-3 w-full"
+      >
+        <h1>Time :</h1>
+        <h1 id="Time" class="text-2xl text-white"></h1>
+      </div>
+      <div
+        class="flex justify-between rounded-3xl py-3 bg-amber-800 px-3 w-full"
+      >
+        <h1>Accuracy :</h1>
+        <h1 id="Accuracy" class="text-2xl text-white"></h1>
+      </div>
+      <div
+        class="flex justify-between rounded-3xl py-3 bg-amber-800 px-3 w-full"
+      >
+        <h1>Correct Letters :</h1>
+        <h1 id="correctLetter" class="text-2xl text-white"></h1>
+      </div>
+      <div
+        class="flex justify-between rounded-3xl py-3 bg-amber-800 px-3 w-full"
+      >
+        <h1>Wrong Letter :</h1>
+        <h1 id="wrongLetter" class="text-2xl text-white"></h1>
+      </div>
+    </div>
     <main id="mainContainder"
       class="mx-5 flex justify-center items-center gap-[px] h-[800px] mt-10 flex-wrap p-15 text-wrap word rounded-2xl bg-white/30 dark:bg-black/30 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg"
     >
