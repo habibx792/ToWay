@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../src/output.css" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"
     />
-    <!-- <script src="../js/header.js" defer></script> -->
+    <script src="../js/games.js" defer></script>
   </head>
   <body class="bg-gradient-to-r from-blue-700 to-blue-800">
     <header class="flex flex-col py-5 justify-center items-center bg-amber-900">
@@ -39,53 +40,53 @@
         </ul>
       </nav>
     </header>
-    <main
+    <main id="mainContainder"
       class="mx-5 flex justify-center items-center gap-[px] h-[800px] mt-10 flex-wrap p-15 text-wrap word rounded-2xl bg-white/30 dark:bg-black/30 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg"
     >
-    <div class="flex gap-6 ml-10 h-full flex-wrap">
-        <a href="" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
+    <div id="container" class="flex gap-6 ml-10 h-full flex-wrap">
+        <a href="" data-item="1" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
         <div class="flex flex-col justify-between">
             <img src="https://rapidtyping.com/img/online-typing-games/bubblingo.jpg" alt="dfdsf">
             <h1 class="text-2xl md:mt-2 mt-5 text-white my-2">Text Bubble</h1>
             <button class="w-full cursor-pointer py-2 md:mt-0 mt-10 bg-pink-700 rounded-4xl">Play</button>
         </div>
       </a>
-      <a href="" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
+      <a href="" data-item="2" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
         <div class="flex flex-col justify-between">
             <img class="h-[260px] w-full "  src="https://cdn.education.com/files/static/game-images/homerow-f-j-d-k-s-l-a-keys-squirrel.png " alt="dfdsf">
             <h1 class="text-2xl md:mt-2 mt-5 text-white my-2">Text Bubble</h1>
             <button class="w-full cursor-pointer py-2 md:mt-0 mt-10 bg-pink-700 rounded-4xl">Play</button>
         </div>
       </a>
-      <a href="" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
+      <a href="" data-item="3" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
         <div class="flex flex-col justify-between">
             <img class="h-[260px] w-full "  src="https://store-images.s-microsoft.com/image/apps.63564.14005123901166465.d2e73827-b4b0-4e04-b659-96ced40446e0.db72e8cf-ae15-422b-ba72-e983263b0aee " alt="dfdsf">
             <h1 class="text-2xl md:mt-2 mt-5 text-white my-2">Text Bubble</h1>
             <button class="w-full cursor-pointer py-2 md:mt-0 mt-10 bg-pink-700 rounded-4xl">Play</button>
         </div>
       </a>
-       <a href="" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
+       <a href="" data-item="4" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
         <div class="flex flex-col justify-between">
             <img class="h-[260px] w-full "  src="https://cdn.aptoide.com/imgs/1/4/7/147a65fdb4669256589b626fe123cdf3_fgraphic.png " alt="dfdsf">
             <h1 class="text-2xl md:mt-2 mt-5 text-white my-2">Text Bubble</h1>
             <button class="w-full cursor-pointer py-2 md:mt-0 mt-10 bg-pink-700 rounded-4xl">Play</button>
         </div>
       </a>
-       <a href="" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
+       <a href="" data-item="5" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
         <div class="flex flex-col justify-between">
             <img class="h-[260px] w-full "  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ11DIFY0rpT32WKd894mwQKkukXl7_ppImeTSNAvaY-6KE96Eh-wUfhjAWwuaC7sE2RsE&usqp=CAU " alt="dfdsf">
             <h1 class="text-2xl md:mt-2 mt-5 text-white my-2">Text Bubble</h1>
             <button class="w-full cursor-pointer py-2 md:mt-0 mt-10 bg-pink-700 rounded-4xl">Play</button>
         </div>
       </a>
-      <a href="" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
+     <a href="" data-item="6" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
         <div class="flex flex-col justify-between">
             <img class="h-[260px] w-full "  src="https://barrie360.com/cobPub/uploads/2024/07/Jump-Type.png " alt="dfdsf">
             <h1 class="text-2xl md:mt-2 mt-5 text-white my-2">Text Bubble</h1>
             <button class="w-full cursor-pointer py-2 md:mt-0 mt-10 bg-pink-700 rounded-4xl">Play</button>
         </div>
       </a>
-         <a href="" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
+         <a href="" data-item="7" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
         <div class="flex flex-col justify-between">
             <img class="h-[260px] w-full "  src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/799430/ss_2b1b2577997c807e78cd96e6e46710126ddd3a9a.1920x1080.jpg?t=1535415202 " alt="dfdsf">
             <h1 class="text-2xl md:mt-2 mt-5 text-white my-2">Text Bubble</h1>
@@ -93,18 +94,15 @@
         </div>
       </a>
        </a>
-         <a href="" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
+         <a href="" data-item="8" class="relative rounded-3xl bg-amber-800 h-[350px] w-[400px] block">
         <div class="flex flex-col justify-between">
             <img class="h-[260px] w-full "  src="https://cdn.education.com/files/static/game-images/all-numbers-squirrel.png" alt="dfdsf">
             <h1 class="text-2xl md:mt-2 mt-5 text-white my-2">Text Bubble</h1>
             <button class="w-full cursor-pointer py-2 md:mt-0 mt-10 bg-pink-700 rounded-4xl">Play</button>
         </div>
       </a>
-
-
     </div>
-
     </main>
-   
+    <!-- <h1 class="absolute top-24 w-full bg-amber-800 text-5xl py-2 z-50 text-white font-bold text-center">Under Development Phase</h1> -->
   </body>
 </html>
