@@ -40,6 +40,17 @@ export const GeneralPractise = [
         "data": "A healthcare administrator manages hospital operations, coordinates staff, oversees patient services, ensures compliance, and maintains smooth and efficient healthcare delivery."
     }
 ];
+export const wordPractises = [
+    "apple", "orange", "banana", "grape", "mango", "pineapple", "strawberry", "watermelon", "kiwi", "blueberry",
+    "elephant", "giraffe", "kangaroo", "dolphin", "tiger", "lion", "zebra", "monkey", "penguin", "whale",
+    "running", "jumping", "swimming", "reading", "writing", "listening", "speaking", "learning", "studying", "teaching",
+    "beautiful", "amazing", "wonderful", "fantastic", "excellent", "brilliant", "creative", "intelligent", "curious", "passionate",
+    "sunshine", "rainbow", "mountain", "river", "ocean", "forest", "desert", "valley", "waterfall", "meadow",
+    "happy", "sad", "angry", "excited", "bored", "confused", "surprised", "tired", "nervous", "relaxed",
+    "computer", "keyboard", "monitor", "mouse", "speaker", "laptop", "printer", "internet", "software", "hardware",
+    "house", "garden", "kitchen", "bedroom", "bathroom", "garage", "balcony", "window", "door", "floor",
+    "friend", "family", "neighbor", "teacher", "doctor", "engineer", "artist", "musician", "writer", "chef"
+];
 
 export function display() {
     const obj = [];
@@ -47,6 +58,9 @@ export function display() {
         obj.push(GeneralPractise[i]);
     }
     return obj;
+}
+export function wordDataBase() {
+    return wordPractises;
 }
 
 

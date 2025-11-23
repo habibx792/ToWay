@@ -1,3 +1,5 @@
+import { display, wordDataBase } from './db.js';
+
 document.addEventListener("DOMContentLoaded", () => {
     const cardsContainer = document.getElementById('container');
     cardsContainer.addEventListener('click', (e) => {
@@ -11,13 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
     function startGame(id) {
+        const mainContainer = document.getElementById("mainContainder");
         if (id == 1) {
-            const mainContainer = document.getElementById("mainContainder");
+
             mainContainer.innerHTML = ""; // clear previous bubbles
 
             const containerHeight = mainContainer.offsetHeight;
             const containerWidth = mainContainer.offsetWidth;
-            const colors = ["red", "green", "gray", "indigo", "amber", ];
+            const colors = ["red", "green", "gray", "indigo", "amber",];
             let ch = 'a';
             // let x = 10
             // let y = 10
@@ -56,31 +59,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 bubble.style.cursor = 'pointer';
                 bubble.innerText = ch;
                 ch = String.fromCharCode(ch.charCodeAt(0) + 1);
-          ;
-                if(ch=='z'||ch=='Z')
-                {
-                    if('z')
-                    {
+                ;
+                if (ch == 'z' || ch == 'Z') {
+                    if ('z') {
                         ch = 'A';
                     }
-                    else{
-                        ch='a'
+                    else {
+                        ch = 'a'
                     }
 
                 }
-                let timeIndex=Math.floor(Math.random()*time.length);
+                let timeIndex = Math.floor(Math.random() * time.length);
                 setTimeout(() => {
                     mainContainer.appendChild(bubble);
-                }, time[timeIndex]+=500);
+                }, time[timeIndex] += 500);
 
 
 
             }
-            let correctLetterTyped=0;
-            let wrongLetterTyped=0;
+            let correctLetterTyped = 0;
+            let wrongLetterTyped = 0;
 
-            let TotaltTypeTyped =0;
-            let gameOver=false;
+            let TotaltTypeTyped = 0;
+            let gameOver = false;
             document.addEventListener("keydown", (event) => {
                 if (gameOver) {
                     event.preventDefault();
@@ -124,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         break;
                     }
-                    else{
+                    else {
                         //
                     }
                 }
@@ -132,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 wrongLetterTyped++;
 
                 if (TotaltTypeTyped >= 100) {
-                    gameOver=true;
+                    gameOver = true;
                     // event.preventDefault();
                     const ResultDiv = document.querySelector("#ResultDIve");
                     const bubbleArray = document.querySelectorAll("#mainContainder div");
@@ -151,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     );
                     wrongLetter.innerText = wrongLetterTyped;
                     correctLetter.innerText = correctLetterTyped;
-                    Accuracy.innerText = Math.floor((correctLetterTyped /TotaltTypeTyped) * 100);
+                    Accuracy.innerText = Math.floor((correctLetterTyped / TotaltTypeTyped) * 100);
                     let wpmSp = (TotaltTypeTyped / 5) / mintues;
                     wpmSp = Math.floor(wpmSp);
                     let rawSp = wpmSp - wrongLetterTyped;
@@ -178,6 +179,82 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
         }
+        if (id == 2) {
+            const mainContainer = document.getElementById("mainContainder");
+            mainContainer.innerHTML = "";
+
+            const div = document.createElement("div");
+            div.id = "ContentId";
+            div.classList.add(
+                "h-1/3", "w-full", "bg-indigo-800", "flex",
+                "justify-center", "items-center", "gap-[2px]",
+                "text-white", "text-2xl", "font-bold","border-2","border-b-yellow-700"
+            );
+            mainContainer.appendChild(div);
+
+            function generateWord() {
+                const div = document.getElementById("ContentId");
+                div.innerHTML = "";
+
+                let wordArray = wordDataBase();
+                let index = Math.floor(Math.random() * wordArray.length);
+                let word = wordArray[index];
+
+                let i = 0;
+                let typingInterval = setInterval(() => {
+                    if (i < word.length) {
+                        let character = document.createElement("h1");
+                        character.classList.add("bg-amber-700","rounded-2xl","animate-pulse","duration-[300ms]", "text-white", "px-2","py-2", "mx-1");
+                        character.innerText = word[i];
+                        div.appendChild(character);
+                        i++;
+                    } else {
+                        clearInterval(typingInterval);
+                    }
+                }, 100);
+            }
+
+            function removeCharacters(div, typedChar) {
+                const h1Elements = Array.from(div.getElementsByTagName("h1"));
+                let currentChar = h1Elements.find(c => !c.classList.contains("typed"));
+                if (!currentChar) return true;
+
+                if (typedChar === currentChar.innerText) {
+                    currentChar.classList.add("typed");
+                    currentChar.style.backgroundColor = "green";
+                    currentChar.style.transition = "all 1s ease";
+                    currentChar.style.transform = "translateY(-300px)";
+                    currentChar.style.opacity = "0";
+
+                    setTimeout(() => currentChar.remove(), 500);
+
+                    // Check if all characters are typed
+                    const remainingChars = h1Elements.filter(c => !c.classList.contains("typed"));
+                    return remainingChars.length === 1; // This was the last one
+                } else {
+                    currentChar.style.backgroundColor = "yellow";
+                    setTimeout(() => {
+                        if (!currentChar.classList.contains("typed")) {
+                            currentChar.style.backgroundColor = "red";
+                        }
+                    }, 200);
+                    return false;
+                }
+            }
+            document.addEventListener("keydown", (e) => {
+                if (e.key.length === 1) {
+                    const div = document.getElementById("ContentId");
+                    let complete = removeCharacters(div, e.key);
+                    if (complete) {
+                        setTimeout(() => {
+                            generateWord();
+                        }, 1000);
+                    }
+                }
+            });
+            generateWord();
+        }
+
     }
 });
 
