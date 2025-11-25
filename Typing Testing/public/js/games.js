@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function startGame(id) {
         const mainContainer = document.getElementById("mainContainder");
+        // alert(id);
         if (id == 1) {
 
             mainContainer.innerHTML = ""; // clear previous bubbles
@@ -87,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     event.preventDefault();
                     return;
                 }
+                // alert(event.key)
 
                 const mainContainer = document.querySelector("#mainContainder");
                 const bubbleArray = mainContainer.querySelectorAll("div");
@@ -94,10 +96,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 for (let i = 0; i < bubbleArray.length; i++) {
                     const bubble = bubbleArray[i];
                     if (bubble.innerText === keyPressed) {
+                        // alert(keyPressed);
                         const drift = Math.random() < 0.5 ? -1 : 1;
                         bubble.style.setProperty("--drift", drift);
                         TotaltTypeTyped++;
-                        correctLetter++;
+                        correctLetterTyped++;
 
                         bubble.classList.add(
                             "transition-all",
@@ -153,12 +156,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     wrongLetter.innerText = wrongLetterTyped;
                     correctLetter.innerText = correctLetterTyped;
                     Accuracy.innerText = Math.floor((correctLetterTyped / TotaltTypeTyped) * 100);
-                    let wpmSp = (TotaltTypeTyped / 5) / mintues;
-                    wpmSp = Math.floor(wpmSp);
-                    let rawSp = wpmSp - wrongLetterTyped;
-                    rawSpeed.innerText = rawSp;
-                    wpm.innerText = wpmSp;
-                    Accuracy.innerText += "%";
+                    // let wpmSp = (TotaltTypeTyped / 5) / mintues;
+                    // wpmSp = Math.floor(wpmSp);
+                    // let rawSp = wpmSp - wrongLetterTyped;
+                    // rawSpeed.innerText = rawSp;
+                    // wpm.innerText = wpmSp;
+                    // Accuracy.innerText += "%";
                     setTimeout(() => {
                         const ResultDIve = document.getElementById("ResultDIve");
                         ResultDIve.remove("top-1/2",
@@ -253,6 +256,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
             generateWord();
+        }
+        if(id==3)
+        {
+            alert()
         }
 
     }
