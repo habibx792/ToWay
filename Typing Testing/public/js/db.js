@@ -52,6 +52,42 @@ export const wordPractises = [
     "friend", "family", "neighbor", "teacher", "doctor", "engineer", "artist", "musician", "writer", "chef"
 ];
 
+export const testSataBase = `The relentless pursuit of innovation within technology sectors continues to transform global business operations 42.
+ Organizations leveraging cloud computing infrastructures experience unprecedented scalability while maintaining robust security protocols! 
+ Digital transformation initiatives require meticulous planning, executive sponsorship, and cross-functional collaboration. Successful implementations
+  demonstrate measurable improvements in operational efficiency 75, customer satisfaction metrics, and employee productivity indices. Companies embracing 
+  agile methodologies typically outperform competitors through accelerated development cycles and enhanced product quality@. Comprehensive data analytics 
+  platforms empower decision-makers with actionable insights derived from complex information ecosystems 33. Strategic partnerships between established 
+  enterprises and disruptive startups frequently yield synergistic advantages in rapidly evolving market landscapes#. Sustainable technological advancement
+   necessitates continuous learning cultures and adaptive organizational structures 88.
+Modern cybersecurity frameworks incorporate multi-layered defense mechanisms to protect 
+sensitive digital assets from sophisticated threats 24. Encryption protocols, biometric authentication systems,
+ and behavioral analytics work in concert to create resilient security postures$. Regulatory compliance requirements
+  continue to evolve alongside technological capabilities, demanding vigilant monitoring and proactive adaptation 91.
+   Enterprise risk management strategies now integrate cyber threat intelligence with traditional business continuity
+    planning%. The proliferation of Internet of Things devices introduces unique vulnerabilities requiring specialized 
+    security solutions 55. Artificial intelligence algorithms enhance threat detection capabilities through pattern recognition 
+    and anomaly identification&. Security awareness training programs remain critical components of comprehensive protection
+     strategies, addressing human factors in cybersecurity equations 67.
+Global economic interdependence creates complex supply chain dynamics requiring sophisticated management approaches 12. Logistics
+ optimization algorithms minimize transportation costs while maximizing delivery efficiency across international borders*. Predictive
+  analytics enable proactive inventory management, reducing capital allocation to safety stock without compromising service levels 49. Sustainable
+   sourcing initiatives gain prominence as consumers increasingly prioritize environmental and social responsibility+. Blockchain technologies offer
+    transformative potential for enhancing supply chain transparency and traceability capabilities 83. Geopolitical factors introduce volatility that 
+    sophisticated risk mitigation strategies must address through diversification and contingency planning=. Digital twin simulations allow organizations
+     to model supply chain disruptions and test response protocols without operational impact 71.
+Renewable energy technologies continue advancing toward grid parity with traditional generation methods 36. Solar photovoltaic efficiency improvements coupled
+ with manufacturing scale economies drive down levelized electricity costs?. Energy storage solutions address intermittency challenges through innovative battery
+  chemistries and mechanical storage systems 94. Smart grid implementations enable dynamic load balancing and distributed energy resource integration;. Regulatory 
+  frameworks evolve to accommodate decentralized generation models and promote clean energy adoption 28. Corporate power purchase agreements accelerate renewable
+   project development while providing price stability for commercial consumers>. Microgrid technologies enhance community resilience during natural disasters
+    and grid disturbances 63. Carbon capture and storage innovations complement transition strategies toward decarbonized energy systems~.
+Quantum computing represents paradigm-shifting potential for solving computationally intensive problems intractable for classical systems 17. Qubit stability 
+improvements and error correction methodologies gradually overcome practical implementation barriers!. Pharmaceutical companies leverage quantum simulations 
+to accelerate drug discovery processes and molecular modeling accuracy 45. Financial institutions explore quantum algorithms for portfolio optimization and risk 
+analysis applications^. Cryptographic systems face future vulnerability to quantum attacks, driving development of post-quantum encryption standards 79. Material
+ science research benefits from quantum-enhanced modeling of molecular structures and properties?. While widespread commercial deployment remains years away,
+  strategic investments in quantum capabilities position organizations for competitive advantage in coming decades 52.`;
 export function display() {
     const obj = [];
     for (let i = 0; i < GeneralPractise.length; i++) {
